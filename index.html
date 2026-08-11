@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jiro C. Beringuela — Software & Network Engineer</title>
+    <meta name="description" content="Portfolio of Jiro C. Beringuela, Software & Network Engineer." />
+
+    <!--
+      IMPORTANT: This inline script runs BEFORE React loads.
+      Why it matters: without this, the page would briefly flash the
+      wrong theme (light, then dark) while React boots up and reads
+      localStorage. This is called avoiding "FOUC" (Flash Of Unstyled Content).
+      By setting the class on <html> immediately, Tailwind's dark: styles
+      apply instantly on first paint.
+    -->
+    <script>
+      (function () {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = stored ? stored === 'dark' : prefersDark;
+        if (isDark) document.documentElement.classList.add('dark');
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
