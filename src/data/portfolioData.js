@@ -65,7 +65,7 @@ export const certifications = [
 ];
 
 export const contact = {
-  email: null, // e.g. 'jiro@example.com' — fill in when ready
-  github: null, // e.g. 'https://github.com/yourhandle'
-  linkedin: null, // e.g. 'https://linkedin.com/in/yourhandle'
+  email: 'jcberinguela07@gmail.com', // e.g. 'jiro@example.com'
+  github: 'https://github.com/Heavenly-Forged', 
+  linkedin: 'www.linkedin.com/in/jiro-beringuela-05a63a2a1', 
 };
